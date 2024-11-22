@@ -1,4 +1,6 @@
+import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'features/splash/index.dart';
 
 void main() {
@@ -10,9 +12,10 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashView(),
+      theme: AppThemes.darkTheme,
+      home: const SplashView(),
     );
   }
 }
