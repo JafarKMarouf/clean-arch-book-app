@@ -1,5 +1,5 @@
-import 'package:clean_arch_bookly_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
+import 'features/splash/index.dart';
 
 void main() {
   runApp(const BooklyApp());
