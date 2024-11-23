@@ -11,5 +11,7 @@ class AppImages {
   static const String imagesImageTest4 = "assets/images/image_test4.svg";
 
   static const String imagesLogo = "assets/images/logo.svg";
+
+  static const String imagesSearch = "assets/images/search.svg";
 }
 

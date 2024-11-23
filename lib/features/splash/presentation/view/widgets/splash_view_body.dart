@@ -19,6 +19,29 @@ class _SplashViewBodyState extends State<SplashViewBody>
     navigateToHome();
   }
 
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Hero(
+              tag: 'logo',
+              child: SvgPicture.asset(
+                AppImages.imagesLogo,
+                height: 40,
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextSliding(slidingAnimation: slidingAnimation),
+          ],
+        ),
+      ),
+    );
+  }
+
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
@@ -44,25 +67,5 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void dispose() {
     animationController.dispose();
     super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              AppImages.imagesLogo,
-              height: 40,
-            ),
-            const SizedBox(height: 8),
-            TextSliding(slidingAnimation: slidingAnimation),
-          ],
-        ),
-      ),
-    );
   }
 }

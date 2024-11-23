@@ -39,7 +39,7 @@ flutter:
   #         weight: 700
 flutter_assets:
   assets_path: assets/images
-  output_path: lib/core/utils/constant
+  output_path: lib/core/utils/constants
   filename: app_images.dart
   field_prefix: null
   ignore_comments: true

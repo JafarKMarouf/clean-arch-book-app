@@ -10,9 +10,9 @@ import 'package:clean_arch_bookly_app/features/home/index.dart';
 import 'package:clean_arch_bookly_app/features/splash/index.dart';
 
 // constants
-part 'utils/styles/app_colors.dart';
-part 'utils/styles/app_styles.dart';
-part 'utils/styles/app_themes.dart';
+part 'utils/constants/app_colors.dart';
+part 'utils/constants/app_styles.dart';
+part 'utils/constants/app_themes.dart';
 part 'utils/constants.dart';
 
 // config
