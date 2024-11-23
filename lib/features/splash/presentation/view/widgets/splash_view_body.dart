@@ -1,9 +1,7 @@
 part of '../../../index.dart';
 
 class SplashViewBody extends StatefulWidget {
-  const SplashViewBody({
-    super.key,
-  });
+  const SplashViewBody({super.key});
 
   @override
   State<SplashViewBody> createState() => _SplashViewBodyState();
@@ -24,27 +22,28 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: kSplashDuration,
     );
 
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 2),
       end: Offset.zero,
     ).animate(animationController);
+
     animationController.forward();
   }
 
   navigateToHome() {
-    // Future.delayed(
-    //   const Duration(milliseconds: 2000),
-    //   () {
-    //     g.Get.offAll(
-    //       () => const EmailVerifyView(),
-    //       transition: g.Transition.fadeIn,
-    //       duration: kDurationTransition,
-    //     );
-    //   },
-    // );
+    Future.delayed(
+      kDurationTransition,
+      () => context.go(AppPages.home),
+    );
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -57,7 +56,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
           children: [
             SvgPicture.asset(
               AppImages.imagesLogo,
-              // fit: BoxFit.fill,
               height: 40,
             ),
             const SizedBox(height: 8),
@@ -66,11 +64,5 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ),
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    animationController.dispose();
   }
 }
