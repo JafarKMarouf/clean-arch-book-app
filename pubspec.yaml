@@ -9,8 +9,10 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.6
+  device_preview: ^1.2.0
   flutter:
     sdk: flutter
+  flutter_svg: ^2.0.15
   google_fonts: ^6.2.1
 
 dev_dependencies:
@@ -23,7 +25,6 @@ flutter:
 
   assets:
     - assets/images/
-
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -35,10 +36,10 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-
 flutter_assets:
   assets_path: assets/images
   output_path: lib/core/utils/constant
   filename: app_images.dart
   field_prefix: null
   ignore_comments: true
+  classname: AppImages

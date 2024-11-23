@@ -1,9 +1,15 @@
 import 'package:clean_arch_bookly_app/core/index.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'features/splash/index.dart';
 
 void main() {
-  runApp(const BooklyApp());
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const BooklyApp(),
+    ),
+  );
 }
 
 class BooklyApp extends StatelessWidget {
@@ -12,6 +18,8 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       theme: AppThemes.darkTheme,
       home: const SplashView(),

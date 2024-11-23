@@ -33,7 +33,7 @@ abstract class AppStyles {
     );
   }
   static TextStyle styleBold18(context) {
-    return const TextStyle(
+    return  const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
     );
