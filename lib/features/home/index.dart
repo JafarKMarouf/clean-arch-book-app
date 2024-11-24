@@ -13,3 +13,4 @@ part './presentation/view/home_view.dart';
 // components
 part './presentation/view/widgets/home_view_body.dart';
 part './presentation/view/widgets/custome_home_app_bar.dart';
+part './presentation/view/widgets/feature_book_list_view_item.dart';
