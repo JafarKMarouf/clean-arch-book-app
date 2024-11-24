@@ -2,6 +2,10 @@
 class AppImages {
   AppImages._();
   
+  static const String imagesCart = "assets/images/cart.svg";
+
+  static const String imagesClose = "assets/images/close.svg";
+
   static const String imagesLogo = "assets/images/logo.svg";
 
   static const String imagesSearch = "assets/images/search.svg";
