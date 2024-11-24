@@ -1,7 +1,7 @@
 part of '../../../index.dart';
 
-class FeatureBookListViewItem extends StatelessWidget {
-  const FeatureBookListViewItem({super.key});
+class FeaturedBookListViewItem extends StatelessWidget {
+  const FeaturedBookListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {

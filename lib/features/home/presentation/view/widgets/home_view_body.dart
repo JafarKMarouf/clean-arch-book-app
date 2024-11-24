@@ -11,7 +11,9 @@ class HomeViewBody extends StatelessWidget {
         child: Column(
           children: [
             CustomeHomeAppBar(),
-            FeatureBookListViewItem(),
+            SizedBox(height: 45),
+            FeaturedBookListView(),
+            SizedBox(height: 51),
           ],
         ),
       ),
