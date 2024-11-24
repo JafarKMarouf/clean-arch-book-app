@@ -6,6 +6,7 @@ class RatingBooks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SvgPicture.asset(AppImages.imagesStarVector),
         const SizedBox(width: 6.3),

@@ -17,6 +17,21 @@ class BookDetailsViewBody extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: width * .2),
               child: const CustomeBookImage(),
             ),
+            const SizedBox(height: 43),
+            Text(
+              'The Jungle Book',
+              style: AppStyles.styleRegular30(context),
+            ),
+            const SizedBox(height: 5),
+            Opacity(
+              opacity: .7,
+              child: Text(
+                'Rudyard Kipling',
+                style: AppStyles.styleMedium18(context),
+              ),
+            ),
+            const SizedBox(height: 14),
+            const RatingBooks(),
           ],
         ),
       ),

@@ -30,6 +30,14 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleMedium18(context) {
+    return const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.w500,
+      fontStyle: FontStyle.italic,
+    );
+  }
+
   static TextStyle styleSemiBold18(context) {
     return const TextStyle(
       fontSize: 18,
@@ -56,6 +64,14 @@ abstract class AppStyles {
     return const TextStyle(
       fontSize: 20,
       fontWeight: FontWeight.bold,
+    );
+  }
+
+  static TextStyle styleRegular30(context) {
+    return const TextStyle(
+      fontFamily: kGTSectra,
+      fontSize: 30,
+      fontWeight: FontWeight.normal,
     );
   }
 }
