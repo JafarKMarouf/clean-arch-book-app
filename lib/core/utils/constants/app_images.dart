@@ -6,6 +6,10 @@ class AppImages {
 
   static const String imagesSearch = "assets/images/search.svg";
 
+  static const String imagesStar = "assets/images/star.png";
+
+  static const String imagesStarVector = "assets/images/star_vector.svg";
+
   static const String imagesTest1 = "assets/images/test1.png";
 }
 

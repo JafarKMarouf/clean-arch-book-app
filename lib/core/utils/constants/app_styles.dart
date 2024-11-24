@@ -46,7 +46,7 @@ abstract class AppStyles {
 
   static TextStyle styleRegular20(context) {
     return const TextStyle(
-      fontFamily: 'GTSectra Fine-Regular',
+      fontFamily: kGTSectra,
       fontSize: 20,
       fontWeight: FontWeight.normal,
     );
