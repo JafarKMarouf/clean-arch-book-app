@@ -18,7 +18,10 @@ class CustomeBookDetailsAppBar extends StatelessWidget {
         ),
         IconButton(
           onPressed: () {},
-          icon: SvgPicture.asset(AppImages.imagesCart),
+          icon: const Icon(
+            Icons.shopping_cart_outlined,
+            color: Colors.white,
+          ),
         ),
       ],
     );

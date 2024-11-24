@@ -17,7 +17,7 @@ part './presentation/view/book_details_view.dart';
 // components
 part './presentation/view/widgets/home_view_body.dart';
 part './presentation/view/widgets/custome_home_app_bar.dart';
-part './presentation/view/widgets/featured_book_list_view_item.dart';
+part 'presentation/view/widgets/custome_book_image.dart';
 part './presentation/view/widgets/featured_book_list_view.dart';
 part './presentation/view/widgets/best_seller_list_view_item.dart';
 part './presentation/view/widgets/rating_books.dart';
