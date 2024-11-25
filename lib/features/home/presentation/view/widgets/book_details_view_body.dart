@@ -32,6 +32,36 @@ class BookDetailsViewBody extends StatelessWidget {
             ),
             const SizedBox(height: 14),
             const RatingBooks(),
+            const SizedBox(height: 37),
+            Row(
+              children: [
+                Expanded(
+                  child: CustomeButton(
+                    onPressed: () {},
+                    title: '19.99€',
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      bottomLeft: Radius.circular(16),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: CustomeButton(
+                    onPressed: () {},
+                    title: 'Free preview',
+                    borderRadius: const BorderRadius.only(
+                      topRight: Radius.circular(16),
+                      bottomRight: Radius.circular(16),
+                    ),
+                    backgroundColor: const Color(0xFFEF8262),
+                    textStyle: AppStyles.styleBold16(context).copyWith(
+                      color: Colors.white,
+                      fontFamily: kGilroy,
+                    ),
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       ),

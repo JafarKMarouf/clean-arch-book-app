@@ -3,7 +3,6 @@ library core;
 // packages
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // screens
@@ -19,3 +18,6 @@ part 'utils/constants.dart';
 // config
 part './config/routes/app_routes.dart';
 part './config/routes/app_pages.dart';
+
+// shared widgets
+part './utils/shared/custome_button.dart';
