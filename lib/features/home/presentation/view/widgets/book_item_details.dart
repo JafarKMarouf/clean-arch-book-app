@@ -1,7 +1,7 @@
 part of '../../../index.dart';
 
-class BestSellerItemDetails extends StatelessWidget {
-  const BestSellerItemDetails({super.key});
+class BookItemDetails extends StatelessWidget {
+  const BookItemDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

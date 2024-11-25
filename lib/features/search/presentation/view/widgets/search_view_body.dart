@@ -5,6 +5,23 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column();
+    return const SafeArea(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Column(
+                children: [
+                  CustomeSearchTextField(),
+                  SizedBox(height: 30),
+                  SearchItemsListView(),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }

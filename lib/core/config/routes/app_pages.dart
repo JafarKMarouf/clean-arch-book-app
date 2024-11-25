@@ -10,7 +10,7 @@ class AppPages {
     GetPage(
       name: initial,
       page: () => const SplashView(),
-      curve: kCurveAnimation,
+      curve: Curves.easeInCirc,
     ),
     GetPage(
       name: home,
@@ -25,7 +25,7 @@ class AppPages {
     GetPage(
       name: search,
       page: () => const SearchView(),
-      curve: kCurveAnimation,
+      curve: Curves.easeInCirc,
     ),
   ];
 }

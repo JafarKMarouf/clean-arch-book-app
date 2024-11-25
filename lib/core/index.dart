@@ -22,3 +22,6 @@ part './config/routes/app_pages.dart';
 
 // shared widgets
 part './utils/shared/custome_button.dart';
+
+// functions
+part './utils/functions/build_input_border.dart';
