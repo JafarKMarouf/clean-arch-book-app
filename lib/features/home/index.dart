@@ -32,3 +32,6 @@ part './presentation/view/widgets/similar_books_list_view.dart';
 
 // entities
 part './domain/entities/book_entity.dart';
+
+// repos
+part './domain/repos/home_repo.dart';
