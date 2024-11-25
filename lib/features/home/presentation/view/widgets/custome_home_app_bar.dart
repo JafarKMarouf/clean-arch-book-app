@@ -13,7 +13,10 @@ class CustomeHomeAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            log('search');
+            Get.toNamed(AppPages.search);
+          },
           icon: SvgPicture.asset(AppImages.imagesSearch),
         ),
       ],

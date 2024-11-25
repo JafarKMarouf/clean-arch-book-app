@@ -4,22 +4,28 @@ class AppPages {
   static const initial = Routes.splash;
   static const home = Routes.home;
   static const bookDetails = Routes.bookDetails;
+  static const search = Routes.search;
 
   static final routes = [
     GetPage(
       name: initial,
       page: () => const SplashView(),
-      curve: Curves.easeIn,
+      curve: kCurveAnimation,
     ),
     GetPage(
       name: home,
       page: () => const HomeView(),
-      curve: Curves.easeIn,
+      curve: kCurveAnimation,
     ),
     GetPage(
       name: bookDetails,
       page: () => const BookDetailsView(),
-      curve: Curves.easeIn,
+      curve: kCurveAnimation,
+    ),
+    GetPage(
+      name: search,
+      page: () => const SearchView(),
+      curve: kCurveAnimation,
     ),
   ];
 }

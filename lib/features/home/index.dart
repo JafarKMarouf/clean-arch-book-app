@@ -1,6 +1,8 @@
 library home;
 
 // packages
+import 'dart:developer';
+
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

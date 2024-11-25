@@ -9,7 +9,10 @@ class CustomeBookDetailsAppBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            log('back');
+            Get.back();
+          },
           icon: const Icon(
             Icons.close,
             size: 30,
