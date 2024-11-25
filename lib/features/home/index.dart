@@ -7,8 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 // constants
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:go_router/go_router.dart';
+import 'package:get/get.dart';
 
 // screens
 part './presentation/view/home_view.dart';

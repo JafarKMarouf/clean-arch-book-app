@@ -5,26 +5,21 @@ class AppPages {
   static const home = Routes.home;
   static const bookDetails = Routes.bookDetails;
 
-  static final routes = GoRouter(
-    routes: [
-      GoRoute(
-        path: initial,
-        builder: (context, state) {
-          return const SplashView();
-        },
-      ),
-      GoRoute(
-        path: home,
-        builder: (context, state) {
-          return const HomeView();
-        },
-      ),
-      GoRoute(
-        path: bookDetails,
-        builder: (context, state) {
-          return const BookDetailsView();
-        },
-      ),
-    ],
-  );
+  static final routes = [
+    GetPage(
+      name: initial,
+      page: () => const SplashView(),
+      curve: Curves.easeIn,
+    ),
+    GetPage(
+      name: home,
+      page: () => const HomeView(),
+      curve: Curves.easeIn,
+    ),
+    GetPage(
+      name: bookDetails,
+      page: () => const BookDetailsView(),
+      curve: Curves.easeIn,
+    ),
+  ];
 }

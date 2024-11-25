@@ -7,7 +7,7 @@ class BestSellerListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        context.go(AppPages.bookDetails);
+        Get.toNamed(AppPages.bookDetails);
       },
       child: Row(
         children: [

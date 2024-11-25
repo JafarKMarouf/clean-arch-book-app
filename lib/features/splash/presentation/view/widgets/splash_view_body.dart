@@ -59,7 +59,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   navigateToHome() {
     Future.delayed(
       kDurationTransition,
-      () => context.go(AppPages.home),
+      () => Get.offAllNamed(AppPages.home),
     );
   }
 
