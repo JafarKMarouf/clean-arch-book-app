@@ -24,3 +24,6 @@ part './presentation/view/widgets/best_seller_item_details.dart';
 part './presentation/view/widgets/best_seller_list_view.dart';
 part './presentation/view/widgets/book_details_view_body.dart';
 part './presentation/view/widgets/custome_book_details_app_bar.dart';
+part './presentation/view/widgets/book_actions.dart';
+part './presentation/view/widgets/infos_book_details.dart';
+part './presentation/view/widgets/similar_books_list_view.dart';

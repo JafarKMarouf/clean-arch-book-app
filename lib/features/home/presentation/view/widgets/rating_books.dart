@@ -1,12 +1,15 @@
 part of '../../../index.dart';
 
 class RatingBooks extends StatelessWidget {
-  const RatingBooks({super.key});
-
+  const RatingBooks({
+    super.key,
+    this.mainAxisAlignment,
+  });
+  final MainAxisAlignment? mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: mainAxisAlignment ?? MainAxisAlignment.start,
       children: [
         SvgPicture.asset(AppImages.imagesStarVector),
         const SizedBox(width: 6.3),

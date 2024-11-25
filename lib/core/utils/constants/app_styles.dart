@@ -15,6 +15,13 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleSemiBold14(context) {
+    return const TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+    );
+  }
+
   static TextStyle styleMedium16(context) {
     return const TextStyle(
       fontSize: 16,
