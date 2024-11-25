@@ -40,3 +40,4 @@ part './domain/repos/home_repo.dart';
 
 // use cases
 part './domain/use_cases/fetch_featured_books_use_case.dart';
+part './domain/use_cases/fetch_newest_books_use_case.dart';
