@@ -1,7 +1,9 @@
 library core;
 
 // packages
+import 'package:clean_arch_bookly_app/core/errors/failure.dart';
 import 'package:clean_arch_bookly_app/features/search/index.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,3 +27,6 @@ part './utils/shared/custome_button.dart';
 
 // functions
 part './utils/functions/build_input_border.dart';
+
+// use case
+part './utils/use_case/use_case.dart';

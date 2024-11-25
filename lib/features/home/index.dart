@@ -1,7 +1,9 @@
 library home;
 
 // packages
+import 'package:clean_arch_bookly_app/core/errors/failure.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -35,3 +37,6 @@ part './domain/entities/book_entity.dart';
 
 // repos
 part './domain/repos/home_repo.dart';
+
+// use cases
+part './domain/use_cases/fetch_featured_books_use_case.dart';
