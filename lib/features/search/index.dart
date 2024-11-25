@@ -4,7 +4,6 @@ import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 import 'package:clean_arch_bookly_app/features/home/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // screens

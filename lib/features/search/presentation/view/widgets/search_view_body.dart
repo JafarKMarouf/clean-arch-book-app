@@ -13,6 +13,7 @@ class SearchViewBody extends StatelessWidget {
             SliverToBoxAdapter(
               child: Column(
                 children: [
+                  SizedBox(height: 15),
                   CustomeSearchTextField(),
                   SizedBox(height: 30),
                   SearchItemsListView(),
