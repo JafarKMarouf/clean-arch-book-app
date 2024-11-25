@@ -10,7 +10,6 @@ class CustomeBookDetailsAppBar extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            log('back');
             Get.back();
           },
           icon: const Icon(

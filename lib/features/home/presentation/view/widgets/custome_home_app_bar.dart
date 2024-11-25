@@ -14,7 +14,6 @@ class CustomeHomeAppBar extends StatelessWidget {
         const Spacer(),
         IconButton(
           onPressed: () {
-            log('search');
             Get.toNamed(AppPages.search);
           },
           icon: SvgPicture.asset(AppImages.imagesSearch),
