@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   AppImages._();
-  
+
   static const String imagesCart = "assets/images/cart.svg";
 
   static const String imagesClose = "assets/images/close.svg";
@@ -16,4 +16,3 @@ class AppImages {
 
   static const String imagesTest1 = "assets/images/test1.png";
 }
-

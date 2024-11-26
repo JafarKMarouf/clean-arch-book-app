@@ -1,17 +1,19 @@
 part of '../../index.dart';
 
 class BookEntity {
-  final String image;
+  final String bookId;
   final String title;
-  final String author;
-  final num price;
-  final num rating;
+  final String? author;
+  final num? price;
+  final String? image;
+  final num? rating;
 
   const BookEntity({
-    required this.image,
+    required this.bookId,
     required this.title,
-    required this.author,
-    required this.price,
-    required this.rating,
+    this.author,
+    this.image,
+    this.price,
+    this.rating,
   });
 }
