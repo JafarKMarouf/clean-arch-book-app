@@ -73,3 +73,6 @@ part './data/data_source/home_remote_data_source.dart';
 
 // local data source
 part './data/data_source/home_local_data_source.dart';
+
+// repos impl
+part './data/repos/home_repo_imp.dart';
