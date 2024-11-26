@@ -4,6 +4,7 @@ library home;
 import 'package:clean_arch_bookly_app/core/errors/failure.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dartz/dartz_unsafe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -46,6 +47,7 @@ part './domain/use_cases/fetch_newest_books_use_case.dart';
 // =============================================
 
 // data layer
+
 // models
 part './data/models/book_model/book_model.dart';
 part './data/models/book_model/volume_info.dart';
@@ -61,3 +63,6 @@ part './data/models/book_model/panelization_summary.dart';
 part './data/models/book_model/retail_price.dart';
 part './data/models/book_model/search_info.dart';
 part './data/models/book_model/offer.dart';
+
+// data source
+part './data/data_source/home_remote_data_source.dart';

@@ -28,6 +28,7 @@ part './utils/shared/custome_button.dart';
 
 // functions
 part './utils/functions/build_input_border.dart';
+part 'utils/functions/parse_to_book_model.dart';
 
 // use case
 part 'use_cases/use_case.dart';
