@@ -4,13 +4,13 @@ library home;
 import 'package:clean_arch_bookly_app/core/errors/failure.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:dartz/dartz.dart';
-import 'package:dartz/dartz_unsafe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 // constants
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
+import 'package:hive_flutter/adapters.dart';
 // =============================================
 
 // presentation layer
@@ -37,6 +37,7 @@ part './presentation/view/widgets/similar_books_list_view.dart';
 // domain layer
 // entities
 part './domain/entities/book_entity.dart';
+part './domain/entities/book_entity.g.dart';
 
 // repos
 part './domain/repos/home_repo.dart';
@@ -65,4 +66,8 @@ part './data/models/book_model/search_info.dart';
 part './data/models/book_model/offer.dart';
 
 // data source
+// remote data source
 part './data/data_source/home_remote_data_source.dart';
+
+// local data source
+// part './data/';

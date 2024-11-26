@@ -1,4 +1,5 @@
 import 'package:clean_arch_bookly_app/core/index.dart';
+import 'package:clean_arch_bookly_app/features/home/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
@@ -6,6 +7,7 @@ import 'package:hive_flutter/adapters.dart';
 void main() async {
   await Hive.initFlutter();
 
+  Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox(kFeaturedBooksBox);
 
   runApp(const BooklyApp());

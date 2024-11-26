@@ -1,14 +1,26 @@
 part of '../../index.dart';
 
-class BookEntity {
+@HiveType(typeId: 1)
+class BookEntity extends HiveObject {
+  @HiveField(0)
   final String bookId;
+
+  @HiveField(1)
   final String title;
+
+  @HiveField(2)
   final String? author;
+
+  @HiveField(3)
   final num? price;
+
+  @HiveField(4)
   final String? image;
+
+  @HiveField(5)
   final num? rating;
 
-  const BookEntity({
+  BookEntity({
     required this.bookId,
     required this.title,
     this.author,
