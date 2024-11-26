@@ -16,6 +16,8 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
       endPoint: 'volumes?q=programming&Filtering=free-ebooks',
     );
     List<BookEntity> books = parseToBookModel(data);
+    saveBooksData(books, kFeaturedBox);
+
     return books;
   }
 
@@ -25,6 +27,7 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
       endPoint: 'volumes?q=programming&Filtering=free-ebooks&sorting=newest',
     );
     List<BookEntity> books = parseToBookModel(data);
+    saveBooksData(books, kNewestBox);
     return books;
   }
 }

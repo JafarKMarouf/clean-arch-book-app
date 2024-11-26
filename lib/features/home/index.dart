@@ -10,7 +10,9 @@ import 'package:get/get.dart';
 
 // constants
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
+// import 'package:hive_flutter/adapters.dart';
 import 'package:hive_flutter/adapters.dart';
+
 // =============================================
 
 // presentation layer
@@ -70,4 +72,4 @@ part './data/models/book_model/offer.dart';
 part './data/data_source/home_remote_data_source.dart';
 
 // local data source
-// part './data/';
+part './data/data_source/home_local_data_source.dart';

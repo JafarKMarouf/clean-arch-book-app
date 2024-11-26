@@ -5,4 +5,5 @@ const kSplashDuration = Duration(milliseconds: 1500);
 const kGTSectra = 'GT-Sectra-Fine-Regular';
 const kGilroy = 'Gilroy-Bold';
 const kCurveAnimation = Curves.easeIn;
-const kFeaturedBooksBox = 'featured_books';
+const kFeaturedBox = 'featured_box';
+const kNewestBox = 'newest_box';
