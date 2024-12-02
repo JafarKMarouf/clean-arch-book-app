@@ -80,5 +80,8 @@ part './data/data_source/home_local_data_source.dart';
 part './data/repos/home_repo_imp.dart';
 
 // manager
-part './presentation/manager/cubit/fetch_featured_books_cubit.dart';
-part './presentation/manager/cubit/fetch_featured_books_state.dart';
+part 'presentation/manager/fetch_featured_books/fetch_featured_books_cubit.dart';
+part 'presentation/manager/fetch_featured_books/fetch_featured_books_state.dart';
+
+part 'presentation/manager/fetch_newest_books/fetch_newest_books_cubit.dart';
+part 'presentation/manager/fetch_newest_books/fetch_newest_books_state.dart';

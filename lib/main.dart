@@ -1,6 +1,5 @@
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:clean_arch_bookly_app/features/home/index.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -11,7 +10,9 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox(kFeaturedBox);
   await Hive.openBox(kNewestBox);
+
   setupServiceLocator();
+
   runApp(const BooklyApp());
 
   // runApp(
@@ -33,6 +34,15 @@ class BooklyApp extends StatelessWidget {
           create: (context) {
             return FetchFeaturedBooksCubit(
               FetchFeaturedBooksUseCase(
+                homeRepo: getIt.get<HomeRepoImp>(),
+              ),
+            );
+          },
+        ),
+        BlocProvider(
+          create: (context) {
+            return FetchNewestBooksCubit(
+              FetchNewestBooksUseCase(
                 homeRepo: getIt.get<HomeRepoImp>(),
               ),
             );
