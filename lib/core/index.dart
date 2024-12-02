@@ -7,6 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_it/get_it.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // screens
@@ -31,6 +32,7 @@ part './utils/shared/custome_button.dart';
 part './utils/functions/build_input_border.dart';
 part './utils/functions/parse_to_book_model.dart';
 part './utils/functions/save_books_data.dart';
+part './utils/functions/setup_service_locator.dart';
 
 // use case
 part 'use_cases/use_case.dart';

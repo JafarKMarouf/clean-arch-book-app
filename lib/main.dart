@@ -1,6 +1,8 @@
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:clean_arch_bookly_app/features/home/index.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
 
@@ -9,7 +11,7 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
   await Hive.openBox(kFeaturedBox);
   await Hive.openBox(kNewestBox);
-
+  setupServiceLocator();
   runApp(const BooklyApp());
 
   // runApp(
@@ -25,13 +27,26 @@ class BooklyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      // locale: DevicePreview.locale(context),
-      // builder: DevicePreview.appBuilder,
-      debugShowCheckedModeBanner: false,
-      theme: AppThemes.darkTheme,
-      initialRoute: AppPages.initial,
-      getPages: AppPages.routes,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) {
+            return FetchFeaturedBooksCubit(
+              FetchFeaturedBooksUseCase(
+                homeRepo: getIt.get<HomeRepoImp>(),
+              ),
+            );
+          },
+        )
+      ],
+      child: GetMaterialApp(
+        // locale: DevicePreview.locale(context),
+        // builder: DevicePreview.appBuilder,
+        debugShowCheckedModeBanner: false,
+        theme: AppThemes.darkTheme,
+        initialRoute: AppPages.initial,
+        getPages: AppPages.routes,
+      ),
     );
   }
 }
