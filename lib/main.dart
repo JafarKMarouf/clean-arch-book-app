@@ -12,6 +12,7 @@ void main() async {
   await Hive.openBox(kNewestBox);
 
   setupServiceLocator();
+  Bloc.observer = SimpleBlocObserver();
 
   runApp(const BooklyApp());
 
