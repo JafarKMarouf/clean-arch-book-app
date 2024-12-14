@@ -3,6 +3,7 @@ library home;
 // packages
 import 'dart:developer';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';

@@ -1,20 +1,20 @@
 part of '../../../index.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
-  const FeaturedBooksListView({super.key});
-
+  const FeaturedBooksListView({super.key, required this.books});
+  final List<BookEntity> books;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.sizeOf(context).height * .25,
       child: ListView.builder(
         padding: EdgeInsets.zero,
-        itemCount: 15,
+        itemCount: books.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return const Padding(
-            padding: EdgeInsets.only(right: 15.0),
-            child: CustomeBookImage(),
+          return Padding(
+            padding: const EdgeInsets.only(right: 15.0),
+            child: CustomeBookImage(image: books[index].image!),
           );
         },
       ),

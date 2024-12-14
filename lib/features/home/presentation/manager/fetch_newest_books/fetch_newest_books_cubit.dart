@@ -11,7 +11,7 @@ class FetchNewestBooksCubit extends Cubit<FetchNewestBooksState> {
     var result = await newestBooksUseCase.call();
 
     result.fold((fail) {
-      emit(FetchNewestBooksFailure(errMsg: fail.toString()));
+      emit(FetchNewestBooksFailure(errMsg: fail.errMessage));
     }, (books) {
       emit(FetchNewestBooksSuccess(books: books));
     });
