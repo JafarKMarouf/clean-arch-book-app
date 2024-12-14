@@ -8,8 +8,8 @@ import 'package:hive_flutter/adapters.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  await Hive.openBox(kFeaturedBox);
-  await Hive.openBox(kNewestBox);
+  await Hive.openBox<BookEntity>(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kNewestBox);
 
   setupServiceLocator();
   Bloc.observer = SimpleBlocObserver();
@@ -37,7 +37,7 @@ class BooklyApp extends StatelessWidget {
               FetchFeaturedBooksUseCase(
                 homeRepo: getIt.get<HomeRepoImp>(),
               ),
-            );
+            )..fetchFeaturedBook();
           },
         ),
         BlocProvider(

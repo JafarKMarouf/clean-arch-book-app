@@ -16,8 +16,8 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
       endPoint: 'volumes?q=programming&Filtering=free-ebooks',
     );
     List<BookEntity> books = parseToBookModel(data);
+    log('++++++++++++++data: $data ++++++++++++++');
     saveBooksData(books, kFeaturedBox);
-
     return books;
   }
 

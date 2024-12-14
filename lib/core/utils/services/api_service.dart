@@ -5,13 +5,16 @@ class ApiService {
 
   const ApiService(this._dio);
 
-  final baseURL = 'https://www.googleapis.com/books/v1/';
+  final baseURL = 'https://www.googleapis.com/books/v1';
 
   Future<Map<String, dynamic>> get({
     required String endPoint,
   }) async {
     _dio.options.headers['Accept'] = 'application/json';
-    var response = await _dio.get('$baseURL$endPoint');
+
+    log('+++++++++base url: $baseURL/$endPoint++++++++++++++');
+    var response = await _dio.get('$baseURL/$endPoint');
+    log('=======data response: ${response.data}===============');
     return response.data;
   }
 }

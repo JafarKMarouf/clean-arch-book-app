@@ -10,7 +10,7 @@ class FetchFeaturedBooksCubit extends Cubit<FetchFeaturedBooksState> {
     emit(FetchFeaturedBookLoading());
     var result = await featuredBooksUseCase.call();
     result.fold((fail) {
-      emit(FetchFeaturedBookFailure(errMsg: fail.toString()));
+      emit(FetchFeaturedBookFailure(errMsg: fail.errMessage));
     }, (books) {
       emit(FetchFeaturedBookSuccess(bookEntity: books));
     });

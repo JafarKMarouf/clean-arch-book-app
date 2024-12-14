@@ -1,7 +1,6 @@
 library core;
 
 // packages
-import 'package:clean_arch_bookly_app/core/errors/failure.dart';
 import 'package:clean_arch_bookly_app/features/search/index.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -38,6 +37,9 @@ part './utils/functions/setup_service_locator.dart';
 
 // use case
 part 'use_cases/use_case.dart';
+
+// error
+part './errors/failure.dart';
 
 // services
 part './utils/services/api_service.dart';
