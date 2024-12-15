@@ -14,15 +14,6 @@ class CustomeBookImage extends StatelessWidget {
           imageUrl: image,
         ),
       ),
-      // child: Container(
-      //   decoration: BoxDecoration(
-      //     image: const DecorationImage(
-      //       fit: BoxFit.fill,
-      //       image: AssetImage(AppImages.imagesTest1),
-      //     ),
-      // borderRadius: BorderRadius.circular(12),
-      //   ),
-      // ),
     );
   }
 }

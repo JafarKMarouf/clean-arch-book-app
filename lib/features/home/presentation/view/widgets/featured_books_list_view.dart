@@ -7,16 +7,26 @@ class FeaturedBooksListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: MediaQuery.sizeOf(context).height * .25,
-      child: ListView.builder(
-        padding: EdgeInsets.zero,
-        itemCount: books.length,
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(right: 15.0),
-            child: CustomeBookImage(image: books[index].image!),
-          );
-        },
+      child: ScrollConfiguration(
+        behavior: const MaterialScrollBehavior().copyWith(
+          dragDevices: {
+            PointerDeviceKind.mouse,
+            PointerDeviceKind.touch,
+            PointerDeviceKind.stylus,
+            PointerDeviceKind.unknown,
+          },
+        ),
+        child: ListView.builder(
+          padding: EdgeInsets.zero,
+          itemCount: books.length,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: CustomeBookImage(image: books[index].image!),
+            );
+          },
+        ),
       ),
     );
   }
