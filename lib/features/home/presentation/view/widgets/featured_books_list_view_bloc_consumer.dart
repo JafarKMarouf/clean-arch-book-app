@@ -1,6 +1,7 @@
 import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/featured_books_list_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../index.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +24,6 @@ class _FeaturedBooksListViewBlocConsumerState
         if (state is FetchFeaturedBookSuccess) {
           booksList.addAll(state.bookEntity);
         }
-        if (state is FetchFeaturedBookFailure) {
-          Get.snackbar('Error', state.errMsg);
-        }
         if (state is FetchFeaturedBookPaginationFailure) {
           Get.snackbar('Error', state.errMsg);
         }
@@ -38,7 +36,11 @@ class _FeaturedBooksListViewBlocConsumerState
         } else if (state is FetchFeaturedBookFailure) {
           return Text(state.errMsg);
         } else {
-          return const Center(child: CircularProgressIndicator());
+          return Shimmer.fromColors(
+            baseColor: Colors.grey,
+            highlightColor: Colors.white,
+            child: const FeaturedBooksListViewLoadingIndicator(),
+          );
         }
       },
     );
