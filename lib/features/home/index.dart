@@ -1,6 +1,6 @@
 library home;
 
-import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/featured_books_list_view_bloc_builder.dart';
+import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/featured_books_list_view_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 // packages

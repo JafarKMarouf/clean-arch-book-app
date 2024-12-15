@@ -16,6 +16,12 @@ final class FetchFeaturedBookFailure extends FetchFeaturedBooksState {
   FetchFeaturedBookFailure({required this.errMsg});
 }
 
+final class FetchFeaturedBookPaginationFailure extends FetchFeaturedBooksState {
+  final String errMsg;
+
+  FetchFeaturedBookPaginationFailure({required this.errMsg});
+}
+
 final class FetchFeaturedBookSuccess extends FetchFeaturedBooksState {
   final List<BookEntity> bookEntity;
 
