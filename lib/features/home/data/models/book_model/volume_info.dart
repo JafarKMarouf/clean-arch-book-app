@@ -2,7 +2,7 @@ part of '../../../index.dart';
 
 class VolumeInfo {
   String? title;
-  List<String>? authors;
+  List<dynamic>? authors;
   String? publisher;
   String? publishedDate;
   String? description;
@@ -10,7 +10,7 @@ class VolumeInfo {
   ReadingModes? readingModes;
   int? pageCount;
   String? printType;
-  List<String>? categories;
+  List<dynamic>? categories;
   num? averageRating;
   num? ratingsCount;
   String? maturityRating;
@@ -49,7 +49,11 @@ class VolumeInfo {
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
         title: json['title'] as String?,
-        authors: json['authors'] as List<String>?,
+        authors: (json['authors'] as List<dynamic>?)
+                ?.map((item) => item?.toString())
+                .toList() ??
+            [],
+        // authors: (json['authors'] as List<String>?),
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
         description: json['description'] as String?,
@@ -62,9 +66,14 @@ class VolumeInfo {
                 json['readingModes'] as Map<String, dynamic>),
         pageCount: json['pageCount'] as int?,
         printType: json['printType'] as String?,
-        categories: json['categories'] as List<String>?,
-        ratingsCount: json['ratingsCount'] as num,
-        averageRating: json['averageRating'] as num,
+        categories: (json['categories'] as List<dynamic>?)
+                ?.map((item) => item?.toString())
+                .toList() ??
+            [],
+        ratingsCount:
+            json['ratingsCount'] == null ? null : json['ratingsCount'] as num,
+        averageRating:
+            json['averageRating'] == null ? null : json['averageRating'] as num,
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
@@ -102,5 +111,7 @@ class VolumeInfo {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
       };
 }

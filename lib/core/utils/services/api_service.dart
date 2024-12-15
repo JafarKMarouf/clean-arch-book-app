@@ -11,10 +11,7 @@ class ApiService {
     required String endPoint,
   }) async {
     _dio.options.headers['Accept'] = 'application/json';
-
-    log('+++++++++base url: $baseURL/$endPoint++++++++++++++');
     var response = await _dio.get('$baseURL/$endPoint');
-    log('=======data response: ${response.data}===============');
     return response.data;
   }
 }

@@ -6,7 +6,7 @@ class BookEntity extends HiveObject {
   final String bookId;
 
   @HiveField(1)
-  final String title;
+  final String? title;
 
   @HiveField(2)
   final String? author;
@@ -22,7 +22,7 @@ class BookEntity extends HiveObject {
 
   BookEntity({
     required this.bookId,
-    required this.title,
+    this.title,
     this.author,
     this.image,
     this.price,

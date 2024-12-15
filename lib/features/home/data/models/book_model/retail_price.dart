@@ -1,18 +1,21 @@
 part of '../../../index.dart';
 
 class RetailPrice {
-  num? amount;
+  // num? amount;
   String? currencyCode;
 
-  RetailPrice({this.amount, this.currencyCode});
+  RetailPrice({
+    // this.amount,
+    this.currencyCode,
+  });
 
   factory RetailPrice.fromJson(Map<String, dynamic> json) => RetailPrice(
-        amount: (json['amount'] as num?)?.toDouble(),
+        // amount: (json['amount'] as num?)?.toDouble(),
         currencyCode: json['currencyCode'] as String?,
       );
 
   Map<String, dynamic> toJson() => {
-        'amount': amount,
+        // 'amount': amount ?? 0.0,
         'currencyCode': currencyCode,
       };
 }

@@ -1,14 +1,18 @@
 part of '../../../index.dart';
 
 class Offer {
-  num? finskyOfferType;
+  // num? finskyOfferType;
   ListPrice? listPrice;
   RetailPrice? retailPrice;
 
-  Offer({this.finskyOfferType, this.listPrice, this.retailPrice});
+  Offer({
+    // this.finskyOfferType,
+    this.listPrice,
+    this.retailPrice,
+  });
 
   factory Offer.fromJson(Map<String, dynamic> json) => Offer(
-        finskyOfferType: json['finskyOfferType'] as num?,
+        // finskyOfferType: json['finskyOfferType'] as num?,
         listPrice: json['listPrice'] == null
             ? null
             : ListPrice.fromJson(json['listPrice'] as Map<String, dynamic>),
@@ -18,7 +22,7 @@ class Offer {
       );
 
   Map<String, dynamic> toJson() => {
-        'finskyOfferType': finskyOfferType,
+        // 'finskyOfferType': finskyOfferType ?? 0.0,
         'listPrice': listPrice?.toJson(),
         'retailPrice': retailPrice?.toJson(),
       };
