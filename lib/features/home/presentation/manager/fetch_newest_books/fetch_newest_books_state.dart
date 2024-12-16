@@ -7,10 +7,18 @@ final class FetchNewestBooksInitial extends FetchNewestBooksState {}
 
 final class FetchNewestBooksLoading extends FetchNewestBooksState {}
 
+final class FetchNewestBooksPaginationLoading extends FetchNewestBooksState {}
+
 final class FetchNewestBooksFailure extends FetchNewestBooksState {
   final String errMsg;
 
   FetchNewestBooksFailure({required this.errMsg});
+}
+
+final class FetchNewestBooksPaginationFailure extends FetchNewestBooksState {
+  final String errMsg;
+
+  FetchNewestBooksPaginationFailure({required this.errMsg});
 }
 
 final class FetchNewestBooksSuccess extends FetchNewestBooksState {

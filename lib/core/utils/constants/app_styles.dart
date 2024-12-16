@@ -22,6 +22,13 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleRegular16(context) {
+    return const TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.normal,
+    );
+  }
+
   static TextStyle styleMedium16(context) {
     return const TextStyle(
       fontSize: 16,

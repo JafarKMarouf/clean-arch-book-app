@@ -18,7 +18,10 @@ class BookEntity extends HiveObject {
   final String? image;
 
   @HiveField(5)
-  final num? rating;
+  final num? averageRating;
+
+  @HiveField(6)
+  final num? ratingsCount;
 
   BookEntity({
     required this.bookId,
@@ -26,6 +29,7 @@ class BookEntity extends HiveObject {
     this.author,
     this.image,
     this.price,
-    this.rating,
+    this.averageRating,
+    this.ratingsCount,
   });
 }

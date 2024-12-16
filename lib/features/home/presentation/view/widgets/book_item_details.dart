@@ -1,8 +1,8 @@
 part of '../../../index.dart';
 
 class BookItemDetails extends StatelessWidget {
-  const BookItemDetails({super.key});
-
+  const BookItemDetails({super.key, this.booksItem});
+  final BookEntity? booksItem;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -12,8 +12,8 @@ class BookItemDetails extends StatelessWidget {
           SizedBox(
             width: MediaQuery.sizeOf(context).width * .4,
             child: Text(
-              'Harry Potter and the Goblet of Fire',
-              style: AppStyles.styleRegular20(context),
+              booksItem?.title ?? '',
+              style: AppStyles.styleRegular16(context),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
@@ -22,18 +22,21 @@ class BookItemDetails extends StatelessWidget {
           Opacity(
             opacity: .7,
             child: Text(
-              'J.K. Rowling',
+              booksItem?.author ?? '',
               style: AppStyles.styleMedium14(context),
             ),
           ),
           Row(
             children: [
               Text(
-                '19.99 €',
-                style: AppStyles.styleBold20(context),
+                booksItem?.price == 0 ? 'Free' : '${booksItem?.price}',
+                style: AppStyles.styleBold18(context),
               ),
               const Spacer(),
-              const RatingBooks(),
+              RatingBooks(
+                averageRating: booksItem?.averageRating,
+                ratingsCount: booksItem?.ratingsCount,
+              ),
             ],
           ),
         ],

@@ -1,10 +1,11 @@
-import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/featured_books_list_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import '../../../index.dart';
 import 'package:flutter/material.dart';
+
+import 'featured_books_list_view.dart';
 
 class FeaturedBooksListViewBlocConsumer extends StatefulWidget {
   const FeaturedBooksListViewBlocConsumer({super.key});
@@ -36,10 +37,8 @@ class _FeaturedBooksListViewBlocConsumerState
         } else if (state is FetchFeaturedBookFailure) {
           return Text(state.errMsg);
         } else {
-          return Shimmer.fromColors(
-            baseColor: Colors.grey,
-            highlightColor: Colors.white,
-            child: const FeaturedBooksListViewLoadingIndicator(),
+          return const Skeletonizer(
+            child: FeaturedBooksListViewLoadingIndicator(),
           );
         }
       },
