@@ -12,6 +12,7 @@ class ApiService {
   }) async {
     _dio.options.headers['Accept'] = 'application/json';
     var response = await _dio.get('$baseURL/$endPoint');
+    // log('+++++++++++++++${response.data}++++++++++++');
     return response.data;
   }
 }

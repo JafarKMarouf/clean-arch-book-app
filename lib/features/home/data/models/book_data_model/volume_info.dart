@@ -8,7 +8,7 @@ class VolumeInfo {
   String? description;
   List<IndustryIdentifier>? industryIdentifiers;
   ReadingModes? readingModes;
-  int? pageCount;
+  num? pageCount;
   String? printType;
   List<dynamic>? categories;
   num? averageRating;
@@ -53,7 +53,6 @@ class VolumeInfo {
                 ?.map((item) => item?.toString())
                 .toList() ??
             [],
-        // authors: (json['authors'] as List<String>?),
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
         description: json['description'] as String?,
@@ -64,16 +63,14 @@ class VolumeInfo {
             ? null
             : ReadingModes.fromJson(
                 json['readingModes'] as Map<String, dynamic>),
-        pageCount: json['pageCount'] as int?,
+        pageCount: json['pageCount'] as num?,
         printType: json['printType'] as String?,
         categories: (json['categories'] as List<dynamic>?)
                 ?.map((item) => item?.toString())
                 .toList() ??
             [],
-        ratingsCount:
-            json['ratingsCount'] == null ? null : json['ratingsCount'] as num,
-        averageRating:
-            json['averageRating'] == null ? null : json['averageRating'] as num,
+        averageRating: json['averageRating'] as num?,
+        ratingsCount: json['ratingsCount'] as num?,
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
@@ -102,6 +99,8 @@ class VolumeInfo {
         'pageCount': pageCount,
         'printType': printType,
         'categories': categories,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
         'maturityRating': maturityRating,
         'allowAnonLogging': allowAnonLogging,
         'contentVersion': contentVersion,
@@ -111,7 +110,5 @@ class VolumeInfo {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
-        'averageRating': averageRating,
-        'ratingsCount': ratingsCount,
       };
 }

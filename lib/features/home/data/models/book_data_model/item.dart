@@ -1,6 +1,6 @@
 part of '../../../index.dart';
 
-class BookModel extends BookEntity {
+class Item extends BookEntity {
   String? kind;
   String? id;
   String? etag;
@@ -10,7 +10,7 @@ class BookModel extends BookEntity {
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
 
-  BookModel({
+  Item({
     this.kind,
     this.id,
     this.etag,
@@ -22,14 +22,16 @@ class BookModel extends BookEntity {
   }) : super(
           bookId: id!,
           title: volumeInfo!.title!,
-          author: volumeInfo.authors!.first ?? 'Not defiend',
+          author: volumeInfo.authors!.isNotEmpty
+              ? volumeInfo.authors!.first
+              : 'Not Found Author',
           price: 0.0,
           image: volumeInfo.imageLinks!.thumbnail,
-          averageRating: volumeInfo.averageRating ?? 0.0,
-          ratingsCount: volumeInfo.ratingsCount ?? 0.0,
+          averageRating: volumeInfo.averageRating ?? 0,
+          ratingsCount: volumeInfo.ratingsCount ?? 0,
         );
 
-  factory BookModel.fromJson(Map<String, dynamic> json) => BookModel(
+  factory Item.fromJson(Map<String, dynamic> json) => Item(
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,

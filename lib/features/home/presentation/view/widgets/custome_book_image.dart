@@ -12,6 +12,25 @@ class CustomeBookImage extends StatelessWidget {
         child: CachedNetworkImage(
           fit: BoxFit.fill,
           imageUrl: image,
+          fadeInCurve: Curves.easeIn,
+          placeholder: (context, url) {
+            return Skeletonizer(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10.0),
+                child: AspectRatio(
+                  aspectRatio: 2.5 / 4,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
         ),
       ),
     );

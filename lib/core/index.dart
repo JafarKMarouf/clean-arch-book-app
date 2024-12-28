@@ -15,7 +15,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:clean_arch_bookly_app/features/home/index.dart';
 import 'package:clean_arch_bookly_app/features/splash/index.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 
 // constants
 part 'utils/constants/app_colors.dart';
