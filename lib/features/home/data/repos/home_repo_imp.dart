@@ -21,11 +21,13 @@ class HomeRepoImp extends HomeRepo {
       }
       books =
           await homeRemoteDataSource.fetchFeaturedBooks(pageNumber: pageNumber);
+
       return right(books);
     } catch (e) {
       if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
+
       return left(ServerFailure(e.toString()));
     }
   }
@@ -44,8 +46,6 @@ class HomeRepoImp extends HomeRepo {
           await homeRemoteDataSource.fetchNewestBooks(pageNumber: pageNumber);
       return right(books);
     } catch (e) {
-      // log('=newest======${e.toString()}=========');
-
       if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }

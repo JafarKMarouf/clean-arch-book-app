@@ -19,7 +19,6 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
           'volumes?q=programming&Filtering=free-ebooks&startIndex=${pageNumber * paginationNumber}',
     );
     List<BookEntity> books = parseToBookModel(data);
-    // log('++++++++++++++data: $data ++++++++++++++');
     saveBooksData(books, kFeaturedBox);
     return books;
   }
@@ -30,7 +29,9 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
       endPoint:
           'volumes?q=programming&Filtering=free-ebooks&sorting=newest&startIndex=${pageNumber * paginationNumber}',
     );
+
     List<BookEntity> books = parseToBookModel(data);
+
     saveBooksData(books, kNewestBox);
     return books;
   }

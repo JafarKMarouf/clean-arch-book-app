@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

@@ -1,12 +1,9 @@
 library home;
 
-import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/best_seller_list_view_bloc_consumer.dart';
-import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/featured_books_list_view_bloc_consumer.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 // packages
-import 'dart:developer';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
@@ -20,6 +17,7 @@ import 'package:get/get.dart';
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 
 import 'package:hive_flutter/adapters.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 import 'presentation/view/widgets/home_view_body.dart';
 
@@ -61,20 +59,19 @@ part './domain/use_cases/fetch_newest_books_use_case.dart';
 // data layer
 
 // models
-part './data/models/book_model/book_model.dart';
-part './data/models/book_model/volume_info.dart';
-part './data/models/book_model/reading_modes.dart';
-part './data/models/book_model/industry_identifier.dart';
-part './data/models/book_model/image_links.dart';
-part './data/models/book_model/access_info.dart';
-part './data/models/book_model/epub.dart';
-part './data/models/book_model/list_price.dart';
-part './data/models/book_model/sale_info.dart';
-part './data/models/book_model/pdf.dart';
-part './data/models/book_model/panelization_summary.dart';
-part './data/models/book_model/retail_price.dart';
-part './data/models/book_model/search_info.dart';
-part './data/models/book_model/offer.dart';
+part './data/models/book_data_model/book_data_model.dart';
+part './data/models/book_data_model/item.dart';
+part './data/models/book_data_model/volume_info.dart';
+part './data/models/book_data_model/reading_modes.dart';
+part './data/models/book_data_model/industry_identifier.dart';
+part './data/models/book_data_model/image_links.dart';
+part './data/models/book_data_model/access_info.dart';
+part './data/models/book_data_model/epub.dart';
+
+part './data/models/book_data_model/sale_info.dart';
+part './data/models/book_data_model/pdf.dart';
+part './data/models/book_data_model/panelization_summary.dart';
+part './data/models/book_data_model/search_info.dart';
 
 // data source
 // remote data source
