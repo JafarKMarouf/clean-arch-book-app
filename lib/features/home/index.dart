@@ -41,6 +41,8 @@ part './presentation/view/widgets/infos_book_details.dart';
 part './presentation/view/widgets/similar_books_list_view.dart';
 part './presentation/view/widgets/featured_books_list_view_loading_indicator.dart';
 part './presentation/view/widgets/best_seller_list_view_loading_indicator.dart';
+part './presentation/view/widgets/book_item_details_loading_indicator.dart';
+part './presentation/view/widgets/rating_books_loading_indicator.dart';
 
 // ==================================================
 

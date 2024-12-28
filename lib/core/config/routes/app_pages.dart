@@ -10,7 +10,7 @@ class AppPages {
     GetPage(
       name: initial,
       page: () => const SplashView(),
-      curve: Curves.easeInCirc,
+      curve: kCurveAnimation,
     ),
     GetPage(
       name: home,

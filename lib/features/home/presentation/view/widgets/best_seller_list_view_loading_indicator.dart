@@ -31,7 +31,7 @@ class BestSellerListViewLoadingIndicator extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 30),
-              const BookItemDetails(),
+              const BookItemDetailsLoadingIndicator(),
             ],
           ),
         );
