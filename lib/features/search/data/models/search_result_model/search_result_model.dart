@@ -3,7 +3,7 @@ part of '../../../index.dart';
 class SearchResultModel {
   String? kind;
   num? totalItems;
-  List<DataItem>? items;
+  List<SearchResultItem>? items;
 
   SearchResultModel({this.kind, this.totalItems, this.items});
 
@@ -12,7 +12,7 @@ class SearchResultModel {
         kind: json['kind'] as String?,
         totalItems: json['totalItems'] as num?,
         items: (json['items'] as List<dynamic>?)
-            ?.map((e) => DataItem.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => SearchResultItem.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

@@ -1,6 +1,6 @@
 part of '../../../index.dart';
 
-class DataItem extends SearchEntity {
+class SearchResultItem extends SearchEntity {
   String? kind;
   String? id;
   String? etag;
@@ -10,7 +10,7 @@ class DataItem extends SearchEntity {
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
 
-  DataItem({
+  SearchResultItem({
     this.kind,
     this.id,
     this.etag,
@@ -30,7 +30,8 @@ class DataItem extends SearchEntity {
           previewLink: volumeInfo.previewLink ?? "",
         );
 
-  factory DataItem.fromJson(Map<String, dynamic> json) => DataItem(
+  factory SearchResultItem.fromJson(Map<String, dynamic> json) =>
+      SearchResultItem(
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,

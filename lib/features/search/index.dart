@@ -30,7 +30,7 @@ part './domain/use_cases/fetch_search_books_use_case.dart';
 // data layer
 // models
 part './data/models/search_result_model/search_result_model.dart';
-part 'data/models/search_result_model/data_item.dart';
+part 'data/models/search_result_model/search_result_item.dart';
 part './data/models/search_result_model/volume_info.dart';
 part './data/models/search_result_model/reading_modes.dart';
 part './data/models/search_result_model/industry_identifier.dart';
@@ -44,6 +44,10 @@ part './data/models/search_result_model/search_info.dart';
 part './data/models/search_result_model/offer.dart';
 part './data/models/search_result_model/list_price.dart';
 part './data/models/search_result_model/retail_price.dart';
+
+// data source
+// remote data source
+part './data/data_source/search_remote_data_source.dart';
 
 // repos impl
 part './data/repos/search_repo_impl.dart';
