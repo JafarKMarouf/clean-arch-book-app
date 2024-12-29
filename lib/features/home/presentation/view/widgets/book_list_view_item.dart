@@ -7,7 +7,10 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.toNamed(AppPages.bookDetails);
+        Get.toNamed(
+          AppPages.bookDetails,
+          arguments: {'book_item': bookItem},
+        );
       },
       child: Row(
         children: [

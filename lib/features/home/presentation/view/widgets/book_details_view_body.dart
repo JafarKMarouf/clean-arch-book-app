@@ -1,8 +1,8 @@
 part of '../../../index.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
-
+  const BookDetailsViewBody({super.key, required this.bookItem});
+  final BookEntity bookItem;
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
@@ -22,19 +22,19 @@ class BookDetailsViewBody extends StatelessWidget {
                       padding: EdgeInsets.symmetric(
                         horizontal: width * .2,
                       ),
-                      child: const CustomeBookImage(image: ''),
+                      child: CustomeBookImage(image: bookItem.image!),
                     ),
                     const SizedBox(height: 43),
-                    const InfosBookDetails(),
+                    InfosBookDetails(bookItem: bookItem),
                     const SizedBox(height: 37),
                     const BookActions(),
-                    const Expanded(child: SizedBox(height: 49)),
+                    const Expanded(child: SizedBox(height: 40)),
                     Text(
                       'You can also like',
                       style: AppStyles.styleSemiBold14(context),
                     ),
                     const SizedBox(height: 16),
-                    const SimilarBooksListView(),
+                    const SimilarBooksListViewBlocConsumer(),
                     const SizedBox(height: 40),
                   ],
                 ),

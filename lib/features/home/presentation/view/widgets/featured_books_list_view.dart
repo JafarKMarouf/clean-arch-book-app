@@ -34,11 +34,13 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
       }
     }
   }
+
   @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -67,6 +69,4 @@ class _FeaturedBooksListViewState extends State<FeaturedBooksListView> {
       ),
     );
   }
-
-
 }

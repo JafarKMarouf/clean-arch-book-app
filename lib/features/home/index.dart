@@ -1,5 +1,6 @@
 library home;
 
+import 'package:clean_arch_bookly_app/features/home/presentation/view/widgets/similar_books_list_view_bloc_consumer.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -38,7 +39,6 @@ part './presentation/view/widgets/custome_book_details_app_bar.dart';
 part './presentation/view/widgets/best_seller_list_view.dart';
 part './presentation/view/widgets/book_actions.dart';
 part './presentation/view/widgets/infos_book_details.dart';
-part './presentation/view/widgets/similar_books_list_view.dart';
 part './presentation/view/widgets/featured_books_list_view_loading_indicator.dart';
 part './presentation/view/widgets/best_seller_list_view_loading_indicator.dart';
 part './presentation/view/widgets/book_item_details_loading_indicator.dart';

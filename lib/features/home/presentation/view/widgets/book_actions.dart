@@ -12,7 +12,7 @@ class BookActions extends StatelessWidget {
           Expanded(
             child: CustomeButton(
               onPressed: () {},
-              title: '19.99€',
+              title: 'Free',
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(16),
                 bottomLeft: Radius.circular(16),

@@ -81,6 +81,14 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleRegular23(context) {
+    return const TextStyle(
+      fontFamily: kGTSectra,
+      fontSize: 23,
+      fontWeight: FontWeight.normal,
+    );
+  }
+
   static TextStyle styleRegular30(context) {
     return const TextStyle(
       fontFamily: kGTSectra,

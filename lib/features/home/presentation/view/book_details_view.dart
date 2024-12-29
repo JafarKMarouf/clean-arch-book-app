@@ -5,8 +5,20 @@ class BookDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: BookDetailsViewBody(),
+    final args = Get.arguments;
+    final BookEntity bookItem = args['book_item'];
+
+    return BlocProvider(
+      create: (context) {
+        return FetchFeaturedBooksCubit(
+          FetchFeaturedBooksUseCase(
+            homeRepo: getIt.get<HomeRepoImp>(),
+          ),
+        )..fetchFeaturedBook();
+      },
+      child: Scaffold(
+        body: BookDetailsViewBody(bookItem: bookItem),
+      ),
     );
   }
 }
