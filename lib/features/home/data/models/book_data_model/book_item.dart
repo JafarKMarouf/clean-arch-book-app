@@ -1,6 +1,6 @@
 part of '../../../index.dart';
 
-class Item extends BookEntity {
+class BookItem extends BookEntity {
   String? kind;
   String? id;
   String? etag;
@@ -10,7 +10,7 @@ class Item extends BookEntity {
   AccessInfo? accessInfo;
   SearchInfo? searchInfo;
 
-  Item({
+  BookItem({
     this.kind,
     this.id,
     this.etag,
@@ -32,7 +32,7 @@ class Item extends BookEntity {
           previewLink: volumeInfo.previewLink ?? "",
         );
 
-  factory Item.fromJson(Map<String, dynamic> json) => Item(
+  factory BookItem.fromJson(Map<String, dynamic> json) => BookItem(
         kind: json['kind'] as String?,
         id: json['id'] as String?,
         etag: json['etag'] as String?,

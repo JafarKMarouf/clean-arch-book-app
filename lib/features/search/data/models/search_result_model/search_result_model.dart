@@ -1,17 +1,18 @@
 part of '../../../index.dart';
 
-class BookDataModel {
+class SearchResultModel {
   String? kind;
   num? totalItems;
-  List<BookItem>? items;
+  List<DataItem>? items;
 
-  BookDataModel({this.kind, this.totalItems, this.items});
+  SearchResultModel({this.kind, this.totalItems, this.items});
 
-  factory BookDataModel.fromJson(Map<String, dynamic> json) => BookDataModel(
+  factory SearchResultModel.fromJson(Map<String, dynamic> json) =>
+      SearchResultModel(
         kind: json['kind'] as String?,
         totalItems: json['totalItems'] as num?,
         items: (json['items'] as List<dynamic>?)
-            ?.map((e) => BookItem.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => DataItem.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

@@ -18,16 +18,10 @@ class SearchEntity {
   final String? image;
 
   @HiveField(5)
-  final num? averageRating;
-
-  @HiveField(6)
-  final num? ratingsCount;
-
-  @HiveField(7)
   final String? previewLink;
 
-  @HiveField(8)
-  final int? foundCount;
+  @HiveField(6)
+  final int? totalItems;
 
   SearchEntity({
     required this.bookId,
@@ -35,9 +29,7 @@ class SearchEntity {
     this.author,
     this.image,
     this.price,
-    this.averageRating,
-    this.ratingsCount,
     this.previewLink,
-    this.foundCount,
+    this.totalItems,
   });
 }

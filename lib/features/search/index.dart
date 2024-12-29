@@ -26,3 +26,24 @@ part './domain/repos/search_repo.dart';
 
 // use case
 part './domain/use_cases/fetch_search_books_use_case.dart';
+
+// data layer
+// models
+part './data/models/search_result_model/search_result_model.dart';
+part 'data/models/search_result_model/data_item.dart';
+part './data/models/search_result_model/volume_info.dart';
+part './data/models/search_result_model/reading_modes.dart';
+part './data/models/search_result_model/industry_identifier.dart';
+part './data/models/search_result_model/image_links.dart';
+part './data/models/search_result_model/access_info.dart';
+part './data/models/search_result_model/epub.dart';
+part './data/models/search_result_model/sale_info.dart';
+part './data/models/search_result_model/pdf.dart';
+part './data/models/search_result_model/panelization_summary.dart';
+part './data/models/search_result_model/search_info.dart';
+part './data/models/search_result_model/offer.dart';
+part './data/models/search_result_model/list_price.dart';
+part './data/models/search_result_model/retail_price.dart';
+
+// repos impl
+part './data/repos/search_repo_impl.dart';

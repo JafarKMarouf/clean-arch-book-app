@@ -22,10 +22,8 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       author: fields[2] as String?,
       image: fields[4] as String?,
       price: fields[3] as num?,
-      averageRating: fields[5] as num?,
-      ratingsCount: fields[6] as num?,
-      previewLink: fields[7] as String?,
-      foundCount: fields[8] as int?,
+      previewLink: fields[5] as String?,
+      totalItems: fields[6] as int?,
     );
   }
 
@@ -44,13 +42,9 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       ..writeByte(4)
       ..write(obj.image)
       ..writeByte(5)
-      ..write(obj.averageRating)
-      ..writeByte(6)
-      ..write(obj.ratingsCount)
-      ..writeByte(7)
       ..write(obj.previewLink)
-      ..writeByte(8)
-      ..write(obj.foundCount);
+      ..writeByte(6)
+      ..write(obj.totalItems);
   }
 
   @override

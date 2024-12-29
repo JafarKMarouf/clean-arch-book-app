@@ -62,14 +62,13 @@ part './domain/use_cases/fetch_newest_books_use_case.dart';
 
 // models
 part './data/models/book_data_model/book_data_model.dart';
-part './data/models/book_data_model/item.dart';
+part 'data/models/book_data_model/book_item.dart';
 part './data/models/book_data_model/volume_info.dart';
 part './data/models/book_data_model/reading_modes.dart';
 part './data/models/book_data_model/industry_identifier.dart';
 part './data/models/book_data_model/image_links.dart';
 part './data/models/book_data_model/access_info.dart';
 part './data/models/book_data_model/epub.dart';
-
 part './data/models/book_data_model/sale_info.dart';
 part './data/models/book_data_model/pdf.dart';
 part './data/models/book_data_model/panelization_summary.dart';
