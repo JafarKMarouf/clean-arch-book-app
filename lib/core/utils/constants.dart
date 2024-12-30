@@ -7,4 +7,5 @@ const kGilroy = 'Gilroy-Bold';
 const kCurveAnimation = Curves.easeInSine;
 const kFeaturedBox = 'featured_box';
 const kNewestBox = 'newest_box';
+const kSearchBox = 'search_box';
 const paginationNumber = 10;

@@ -49,5 +49,8 @@ part './data/models/search_result_model/retail_price.dart';
 // remote data source
 part './data/data_source/search_remote_data_source.dart';
 
+//local data source
+part './data/data_source/search_local_data_source.dart';
+
 // repos impl
 part './data/repos/search_repo_impl.dart';
