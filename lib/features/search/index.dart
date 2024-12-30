@@ -5,6 +5,7 @@ import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hive/hive.dart';
 
@@ -55,3 +56,7 @@ part './data/data_source/search_local_data_source.dart';
 
 // repos impl
 part './data/repos/search_repo_impl.dart';
+
+// manager
+part 'presentation/manager/fetch_search_books_cubit/fetch_search_books_cubit.dart';
+part 'presentation/manager/fetch_search_books_cubit/fetch_search_books_state.dart';

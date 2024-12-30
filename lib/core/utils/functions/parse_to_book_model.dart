@@ -5,6 +5,7 @@ List<BookEntity> parseToBookModel(Map<String, dynamic> data) {
 
   for (var book in data['items']) {
     books.add(BookItem.fromJson(book));
+    // log('+++++++++++++books++${books}++++++++++++');
   }
 
   return books;
