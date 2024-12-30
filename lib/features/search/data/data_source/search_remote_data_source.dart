@@ -22,8 +22,9 @@ class SearchRemoteDataSourceImpl extends SearchRemoteDataSource {
           '/volumes?q=$title&startIndex=${pageNumber * paginationNumber}&maxResults=40',
     );
 
-    List<SearchEntity> searchResult = parseToSearchModel(data);
+    List<SearchEntity> results = parseToSearchModel(data);
     // save to local storage
-    return searchResult;
+    saveSearchResult(results, kSearchBox);
+    return results;
   }
 }
