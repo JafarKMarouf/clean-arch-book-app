@@ -14,8 +14,8 @@ final class FetchSearchBooksFailure extends FetchSearchBooksState {
 }
 
 final class FetchSearchBooksSucsess extends FetchSearchBooksState {
-  final List<SearchEntity> results;
+  final List<SearchEntity> searchEntity;
   FetchSearchBooksSucsess({
-    required this.results,
+    required this.searchEntity,
   });
 }
