@@ -1,6 +1,3 @@
-// part of '../../../index.dart';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -33,15 +30,13 @@ class _CustomeSearchTextFieldState extends State<CustomeSearchTextField> {
           }
           return null;
         },
-        onChanged: (value) {
-          log('+++++++on change value:$value+++++');
-          if (formKey.currentState!.validate()) {
-            BlocProvider.of<SearchBookCubit>(context)
-                .fetchSearchBooks(title: value);
-          }
-        },
+        // onChanged: (value) {
+        //   if (formKey.currentState!.validate()) {
+        //     BlocProvider.of<SearchBookCubit>(context)
+        //         .fetchSearchBooks(title: value);
+        //   }
+        // },
         onFieldSubmitted: (value) {
-          log('+++++++on submit value:$value+++++');
           if (formKey.currentState!.validate()) {
             BlocProvider.of<SearchBookCubit>(context)
                 .fetchSearchBooks(title: value);

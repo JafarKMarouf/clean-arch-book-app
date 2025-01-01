@@ -20,27 +20,21 @@ class SearchRepoImpl extends SearchRepo {
         pageNumber: pageNumber,
         title: title,
       );
-      if (result.isNotEmpty) {
-        // log('+++++++result from local storage:$result++++++');
-        return right(result);
-      }
+
+      // if (result.isNotEmpty) {
+      //   return right(result);
+      // }
+
       result = await searchRemoteDataSource.fetchSearchResult(
         pageNumber: pageNumber,
         title: title,
       );
-      log('+++++++result from remote storage:$result++++++');
 
       return right(result);
     } catch (e) {
-      // e.printError();
       if (e is DioException) {
-        log('++++++++++++dio exepcetion error: ${e.error}+++++++++++');
-        log('++++++++++++dio exepcetion message: ${e.response}+++++++++++');
-        log('++++++++++++dio exepcetion type: ${e.type}+++++++++++');
         return left(ServerFailure.fromDioError(e));
       }
-      log('+++++++error:${e.toString()}+++++++++');
-
       return left(ServerFailure(e.toString()));
     }
   }

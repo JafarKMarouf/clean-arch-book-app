@@ -20,12 +20,10 @@ class SearchRemoteDataSourceImpl extends SearchRemoteDataSource {
     var data = await apiService.get(
       endPoint:
           'volumes?q=$title&startIndex=${pageNumber * paginationNumber}&maxResults=20',
-      // 'volumes?q=$title&startIndex=${pageNumber * paginationNumber}&maxResults=20',
     );
 
     List<SearchEntity> results = parseToSearchModel(data);
-    // save to local storage
-    saveSearchResult(results, kSearchBox);
+    // saveSearchResult(results, kSearchBox);
     return results;
   }
 }

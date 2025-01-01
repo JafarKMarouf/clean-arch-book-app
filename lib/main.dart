@@ -14,6 +14,7 @@ void main() async {
   await Hive.deleteBoxFromDisk(kSearchBox);
   await Hive.deleteBoxFromDisk(kFeaturedBox);
   await Hive.deleteBoxFromDisk(kNewestBox);
+
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
   await Hive.openBox<SearchEntity>(kSearchBox);
@@ -22,13 +23,6 @@ void main() async {
   Bloc.observer = SimpleBlocObserver();
 
   runApp(const BooklyApp());
-
-  // runApp(
-  //   DevicePreview(
-  //     enabled: false,
-  //     builder: (context) => const BooklyApp(),
-  //   ),
-  // );
 }
 
 class BooklyApp extends StatelessWidget {
@@ -58,8 +52,6 @@ class BooklyApp extends StatelessWidget {
         ),
       ],
       child: GetMaterialApp(
-        // locale: DevicePreview.locale(context),
-        // builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         theme: AppThemes.darkTheme,
         initialRoute: AppPages.initial,

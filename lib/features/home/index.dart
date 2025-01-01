@@ -43,6 +43,7 @@ part './presentation/view/widgets/featured_books_list_view_loading_indicator.dar
 // entities
 part './domain/entities/book_entity.dart';
 part './domain/entities/book_entity.g.dart';
+
 // repos
 part './domain/repos/home_repo.dart';
 

@@ -1,7 +1,5 @@
 library search;
 
-import 'dart:developer';
-
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 import 'package:dartz/dartz.dart';
@@ -27,8 +25,8 @@ part 'presentation/view/widgets/search_book_item_details.dart';
 
 // domain layer
 // entity
-part './domain/entities/search_entity.dart';
-part './domain/entities/search_entity.g.dart';
+part 'domain/entities/search_entity/search_entity.dart';
+part 'domain/entities/search_entity/search_entity.g.dart';
 
 // repos
 part './domain/repos/search_repo.dart';

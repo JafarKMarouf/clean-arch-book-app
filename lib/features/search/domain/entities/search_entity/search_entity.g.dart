@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../../index.dart';
+part of '../../../index.dart';
 
 // **************************************************************************
 // TypeAdapterGenerator
@@ -23,15 +23,16 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       image: fields[4] as String?,
       price: fields[3] as num?,
       previewLink: fields[5] as String?,
-      averageRating: fields[6] as int?,
-      ratingsCount: fields[7] as int?,
+      averageRating: fields[6] as num?,
+      ratingsCount: fields[7] as num?,
+      searchTitle: fields[8] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, SearchEntity obj) {
     writer
-      ..writeByte(8)
+      ..writeByte(9)
       ..writeByte(0)
       ..write(obj.bookId)
       ..writeByte(1)
@@ -47,7 +48,9 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       ..writeByte(6)
       ..write(obj.averageRating)
       ..writeByte(7)
-      ..write(obj.ratingsCount);
+      ..write(obj.ratingsCount)
+      ..writeByte(8)
+      ..write(obj.searchTitle);
   }
 
   @override
