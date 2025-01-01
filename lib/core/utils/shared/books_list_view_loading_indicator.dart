@@ -1,7 +1,7 @@
-part of '../../../index.dart';
+part of '../../index.dart';
 
-class BestSellerListViewLoadingIndicator extends StatelessWidget {
-  const BestSellerListViewLoadingIndicator({super.key});
+class BooksListViewLoadingIndicator extends StatelessWidget {
+  const BooksListViewLoadingIndicator({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,14 @@ class BestSellerListViewLoadingIndicator extends StatelessWidget {
                 height: MediaQuery.sizeOf(context).height * .17,
                 child: AspectRatio(
                   aspectRatio: 2.7 / 4,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      image: const DecorationImage(
-                        fit: BoxFit.fill,
-                        image: AssetImage(AppImages.imagesTest1),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Skeletonizer(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.grey,
                       ),
-                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                 ),

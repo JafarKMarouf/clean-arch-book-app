@@ -21,7 +21,8 @@ class VolumeInfo {
   String? previewLink;
   String? infoLink;
   String? canonicalVolumeLink;
-
+  num? averageRating;
+  num? ratingsCount;
   VolumeInfo({
     this.title,
     this.subtitle,
@@ -43,6 +44,8 @@ class VolumeInfo {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.averageRating,
+    this.ratingsCount,
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
@@ -82,6 +85,8 @@ class VolumeInfo {
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
         canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+        averageRating: json['averageRating'] as num?,
+        ratingsCount: json['ratingsCount'] as num?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -106,5 +111,7 @@ class VolumeInfo {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
       };
 }

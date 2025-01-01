@@ -16,7 +16,7 @@ class SearchViewBody extends StatelessWidget {
                   SizedBox(height: 15),
                   CustomeSearchTextField(),
                   SizedBox(height: 30),
-                  SearchItemsListView(),
+                  SearchItemsListViewBlocBuilder(),
                 ],
               ),
             )

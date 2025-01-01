@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../index.dart';
-import 'best_seller_list_view_bloc_consumer.dart';
+import 'books_list_view_bloc_consumer.dart';
 import 'featured_books_list_view_bloc_consumer.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -79,7 +79,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                 ),
               ),
               const SliverToBoxAdapter(
-                child: BestSellerListViewBlocConsumer(),
+                child: BooksListViewBlocConsumer(),
               ),
             ],
           ),

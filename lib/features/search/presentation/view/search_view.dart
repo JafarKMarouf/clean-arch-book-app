@@ -5,8 +5,17 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SearchViewBody(),
+    return BlocProvider(
+      create: (context) {
+        return SearchBookCubit(
+          FetchSearchBooksUseCase(
+            searchRepo: getIt.get<SearchRepoImpl>(),
+          ),
+        );
+      },
+      child: const Scaffold(
+        body: SearchViewBody(),
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 part of '../../index.dart';
 
 @HiveType(typeId: 2)
-class SearchEntity {
+class SearchEntity extends HiveObject {
   @HiveField(0)
   final String bookId;
 
@@ -21,7 +21,10 @@ class SearchEntity {
   final String? previewLink;
 
   @HiveField(6)
-  final int? totalItems;
+  final num? averageRating;
+
+  @HiveField(7)
+  final num? ratingsCount;
 
   SearchEntity({
     required this.bookId,
@@ -30,6 +33,7 @@ class SearchEntity {
     this.image,
     this.price,
     this.previewLink,
-    this.totalItems,
+    this.averageRating,
+    this.ratingsCount,
   });
 }

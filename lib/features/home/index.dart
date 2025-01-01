@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 
 // packages
 
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
@@ -18,7 +17,6 @@ import 'package:get/get.dart';
 import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 
 import 'package:hive_flutter/adapters.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 
 import 'presentation/view/widgets/home_view_body.dart';
 
@@ -30,19 +28,14 @@ part './presentation/view/book_details_view.dart';
 
 // components
 part './presentation/view/widgets/custome_home_app_bar.dart';
-part './presentation/view/widgets/custome_book_image.dart';
 part './presentation/view/widgets/book_list_view_item.dart';
-part './presentation/view/widgets/rating_books.dart';
 part './presentation/view/widgets/book_item_details.dart';
 part './presentation/view/widgets/book_details_view_body.dart';
 part './presentation/view/widgets/custome_book_details_app_bar.dart';
-part './presentation/view/widgets/best_seller_list_view.dart';
+part 'presentation/view/widgets/books_list_view.dart';
 part './presentation/view/widgets/book_actions.dart';
 part './presentation/view/widgets/infos_book_details.dart';
 part './presentation/view/widgets/featured_books_list_view_loading_indicator.dart';
-part './presentation/view/widgets/best_seller_list_view_loading_indicator.dart';
-part './presentation/view/widgets/book_item_details_loading_indicator.dart';
-part './presentation/view/widgets/rating_books_loading_indicator.dart';
 
 // ==================================================
 

@@ -10,6 +10,8 @@ class ApiService {
   Future<Map<String, dynamic>> get({
     required String endPoint,
   }) async {
+    // log('+++++++++++++++$baseURL$endPoint++++++++++++');
+
     _dio.options.headers['Accept'] = 'application/json';
     var response = await _dio.get('$baseURL/$endPoint');
     // log('+++++++++++++++${response.data}++++++++++++');

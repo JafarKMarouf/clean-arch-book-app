@@ -11,6 +11,9 @@ void main() async {
   Hive.registerAdapter(BookEntityAdapter());
   Hive.registerAdapter(SearchEntityAdapter());
 
+  await Hive.deleteBoxFromDisk(kSearchBox);
+  await Hive.deleteBoxFromDisk(kFeaturedBox);
+  await Hive.deleteBoxFromDisk(kNewestBox);
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
   await Hive.openBox<SearchEntity>(kSearchBox);
@@ -52,7 +55,7 @@ class BooklyApp extends StatelessWidget {
               ),
             )..fetchNewestBooks();
           },
-        )
+        ),
       ],
       child: GetMaterialApp(
         // locale: DevicePreview.locale(context),

@@ -1,4 +1,4 @@
-part of '../../../index.dart';
+part of '../../index.dart';
 
 class RatingBooksLoadingIndicator extends StatelessWidget {
   const RatingBooksLoadingIndicator({super.key});
@@ -8,13 +8,7 @@ class RatingBooksLoadingIndicator extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Skeletonizer(
-          child: Container(
-            width: 24,
-            height: 24,
-            color: Colors.grey,
-          ),
-        ),
+        const Icon(Icons.start, size: 15),
         const SizedBox(width: 6.3),
         Text(
           '5',

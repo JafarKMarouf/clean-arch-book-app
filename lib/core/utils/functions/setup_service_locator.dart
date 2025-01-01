@@ -11,4 +11,12 @@ void setupServiceLocator() {
       homeRemoteDataSource: HomeRemoteDataSourceImp(getIt.get<ApiService>()),
     ),
   );
+  getIt.registerSingleton<SearchRepoImpl>(
+    SearchRepoImpl(
+      searchLocalDataSource: SearchLocalDataSourceImpl(),
+      searchRemoteDataSource: SearchRemoteDataSourceImpl(
+        getIt.get<ApiService>(),
+      ),
+    ),
+  );
 }

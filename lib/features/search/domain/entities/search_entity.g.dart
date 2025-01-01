@@ -23,14 +23,15 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       image: fields[4] as String?,
       price: fields[3] as num?,
       previewLink: fields[5] as String?,
-      totalItems: fields[6] as int?,
+      averageRating: fields[6] as int?,
+      ratingsCount: fields[7] as int?,
     );
   }
 
   @override
   void write(BinaryWriter writer, SearchEntity obj) {
     writer
-      ..writeByte(9)
+      ..writeByte(8)
       ..writeByte(0)
       ..write(obj.bookId)
       ..writeByte(1)
@@ -44,7 +45,9 @@ class SearchEntityAdapter extends TypeAdapter<SearchEntity> {
       ..writeByte(5)
       ..write(obj.previewLink)
       ..writeByte(6)
-      ..write(obj.totalItems);
+      ..write(obj.averageRating)
+      ..writeByte(7)
+      ..write(obj.ratingsCount);
   }
 
   @override

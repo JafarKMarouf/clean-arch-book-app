@@ -21,7 +21,6 @@ class HomeRemoteDataSourceImp extends HomeRemoteDataSource {
 
     List<BookEntity> books = parseToBookModel(data);
     // log('+++++++++++++books++${books}++++++++++++');
-
     saveBooksData(books, kFeaturedBox);
     return books;
   }

@@ -11,8 +11,7 @@ class VolumeInfo {
   num? pageCount;
   String? printType;
   List<dynamic>? categories;
-  num? averageRating;
-  num? ratingsCount;
+
   String? maturityRating;
   bool? allowAnonLogging;
   String? contentVersion;
@@ -22,7 +21,8 @@ class VolumeInfo {
   String? previewLink;
   String? infoLink;
   String? canonicalVolumeLink;
-
+  num? averageRating;
+  num? ratingsCount;
   VolumeInfo({
     this.title,
     this.authors,
@@ -34,8 +34,6 @@ class VolumeInfo {
     this.pageCount,
     this.printType,
     this.categories,
-    this.averageRating,
-    this.ratingsCount,
     this.maturityRating,
     this.allowAnonLogging,
     this.contentVersion,
@@ -45,6 +43,8 @@ class VolumeInfo {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.averageRating,
+    this.ratingsCount,
   });
 
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
@@ -69,8 +69,6 @@ class VolumeInfo {
                 ?.map((item) => item?.toString())
                 .toList() ??
             [],
-        averageRating: json['averageRating'] as num?,
-        ratingsCount: json['ratingsCount'] as num?,
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
@@ -85,6 +83,8 @@ class VolumeInfo {
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
         canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+        averageRating: json['averageRating'] as num?,
+        ratingsCount: json['ratingsCount'] as num?,
       );
 
   Map<String, dynamic> toJson() => {
@@ -99,8 +99,6 @@ class VolumeInfo {
         'pageCount': pageCount,
         'printType': printType,
         'categories': categories,
-        'averageRating': averageRating,
-        'ratingsCount': ratingsCount,
         'maturityRating': maturityRating,
         'allowAnonLogging': allowAnonLogging,
         'contentVersion': contentVersion,
@@ -110,5 +108,7 @@ class VolumeInfo {
         'previewLink': previewLink,
         'infoLink': infoLink,
         'canonicalVolumeLink': canonicalVolumeLink,
+        'averageRating': averageRating,
+        'ratingsCount': ratingsCount,
       };
 }
