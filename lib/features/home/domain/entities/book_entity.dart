@@ -23,6 +23,9 @@ class BookEntity extends HiveObject {
   @HiveField(6)
   final num? ratingsCount;
 
+  @HiveField(7)
+  final String? previewLink;
+
   BookEntity({
     required this.bookId,
     this.title,
@@ -31,5 +34,6 @@ class BookEntity extends HiveObject {
     this.price,
     this.averageRating,
     this.ratingsCount,
+    this.previewLink,
   });
 }

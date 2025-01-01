@@ -1,4 +1,4 @@
-part of '../../../index.dart';
+part of '../../index.dart';
 
 class CustomeBookImage extends StatelessWidget {
   const CustomeBookImage({super.key, required this.image});

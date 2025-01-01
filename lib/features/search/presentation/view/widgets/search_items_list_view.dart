@@ -1,19 +1,21 @@
 part of '../../../index.dart';
 
 class SearchItemsListView extends StatelessWidget {
-  const SearchItemsListView({super.key});
-
+  const SearchItemsListView({super.key, required this.searchResultList});
+  final List<SearchEntity> searchResultList;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: EdgeInsets.zero,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: 20,
+      itemCount: searchResultList.length,
       itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.only(bottom: 16.0),
-          // child: BookListViewItem(),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 16.0),
+          child: SearchListViewItem(
+            bookItem: searchResultList[index],
+          ),
         );
       },
     );

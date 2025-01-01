@@ -3,7 +3,7 @@ part of '../../../index.dart';
 class BookDataModel {
   String? kind;
   num? totalItems;
-  List<Item>? items;
+  List<BookItem>? items;
 
   BookDataModel({this.kind, this.totalItems, this.items});
 
@@ -11,7 +11,7 @@ class BookDataModel {
         kind: json['kind'] as String?,
         totalItems: json['totalItems'] as num?,
         items: (json['items'] as List<dynamic>?)
-            ?.map((e) => Item.fromJson(e as Map<String, dynamic>))
+            ?.map((e) => BookItem.fromJson(e as Map<String, dynamic>))
             .toList(),
       );
 

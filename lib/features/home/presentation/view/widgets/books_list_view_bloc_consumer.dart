@@ -1,21 +1,19 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 
-import 'package:skeletonizer/skeletonizer.dart';
-
+import '../../../../../core/index.dart';
 import '../../../index.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerListViewBlocConsumer extends StatefulWidget {
-  const BestSellerListViewBlocConsumer({super.key});
+class BooksListViewBlocConsumer extends StatefulWidget {
+  const BooksListViewBlocConsumer({super.key});
 
   @override
-  State<BestSellerListViewBlocConsumer> createState() =>
-      _BestSellerListViewBlocConsumerState();
+  State<BooksListViewBlocConsumer> createState() =>
+      _BooksListViewBlocConsumerState();
 }
 
-class _BestSellerListViewBlocConsumerState
-    extends State<BestSellerListViewBlocConsumer> {
+class _BooksListViewBlocConsumerState extends State<BooksListViewBlocConsumer> {
   List<BookEntity> booksList = [];
 
   @override
@@ -33,13 +31,11 @@ class _BestSellerListViewBlocConsumerState
         if (state is FetchNewestBooksSuccess ||
             state is FetchNewestBooksPaginationLoading ||
             state is FetchNewestBooksPaginationFailure) {
-          return BestSellerListView(bookItem: booksList);
+          return BooksListView(bookItem: booksList);
         } else if (state is FetchNewestBooksFailure) {
           return Text(state.errMsg);
         } else {
-          return const Skeletonizer(
-            child: BestSellerListViewLoadingIndicator(),
-          );
+          return const BooksListViewLoadingIndicator();
         }
       },
     );

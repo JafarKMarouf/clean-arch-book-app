@@ -1,8 +1,8 @@
 part of '../../../index.dart';
 
-class BookItemDetailsLoadingIndicator extends StatelessWidget {
-  const BookItemDetailsLoadingIndicator({super.key});
-
+class SearchBookItemDetails extends StatelessWidget {
+  const SearchBookItemDetails({super.key, required this.booksItem});
+  final SearchEntity booksItem;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -12,7 +12,7 @@ class BookItemDetailsLoadingIndicator extends StatelessWidget {
           SizedBox(
             width: MediaQuery.sizeOf(context).width * .4,
             child: Text(
-              'Programming and Problem Solving with Java',
+              booksItem.title ?? '',
               style: AppStyles.styleRegular16(context),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
@@ -22,18 +22,21 @@ class BookItemDetailsLoadingIndicator extends StatelessWidget {
           Opacity(
             opacity: .7,
             child: Text(
-              'Nell B. Dale',
+              booksItem.author ?? '',
               style: AppStyles.styleMedium14(context),
             ),
           ),
           Row(
             children: [
               Text(
-                'Free',
+                booksItem.price == 0 ? 'Free' : '${booksItem.price}',
                 style: AppStyles.styleBold18(context),
               ),
               const Spacer(),
-              const RatingBooksLoadingIndicator(),
+              RatingBooks(
+                averageRating: booksItem.averageRating,
+                ratingsCount: booksItem.ratingsCount,
+              ),
             ],
           ),
         ],

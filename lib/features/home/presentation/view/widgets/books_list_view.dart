@@ -1,7 +1,7 @@
 part of '../../../index.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key, required this.bookItem});
+class BooksListView extends StatelessWidget {
+  const BooksListView({super.key, required this.bookItem});
   final List<BookEntity> bookItem;
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,7 @@ class BestSellerListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 12.0),
-          child: BookListViewItem(
-            bookItem: bookItem[index],
-          ),
+          child: BookListViewItem(bookItem: bookItem[index]),
         );
       },
     );
