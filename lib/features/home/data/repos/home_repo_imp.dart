@@ -24,8 +24,6 @@ class HomeRepoImp extends HomeRepo {
 
       return right(books);
     } catch (e) {
-      // log('+++++++++++++Error++${e.toString()}++++++++++++');
-      e.printError();
       if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }

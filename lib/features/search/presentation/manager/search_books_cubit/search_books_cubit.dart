@@ -4,7 +4,7 @@ class SearchBookCubit extends Cubit<SearchBooksState> {
   SearchBookCubit(this.searchBooksUseCase) : super(SearchBooksInitial());
 
   final FetchSearchBooksUseCase searchBooksUseCase;
-
+  final TextEditingController searchController = TextEditingController();
   Future<void> fetchSearchBooks({
     int pageNumber = 0,
     required String title,

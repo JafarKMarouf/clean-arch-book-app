@@ -29,7 +29,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   void _onScroll() async {
     double currentPosition = _scrollController.position.pixels;
     double maxLength = _scrollController.position.maxScrollExtent;
-    if (currentPosition >= maxLength * 0.3) {
+    if (currentPosition >= maxLength * 0.7) {
       if (!isLoading) {
         isLoading = true;
         await BlocProvider.of<FetchNewestBooksCubit>(context)

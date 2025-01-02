@@ -10,14 +10,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 
-import 'presentation/view/widgets/custome_search_text_field.dart';
-import 'presentation/view/widgets/search_items_list_view_bloc_builder.dart';
+// import 'presentation/view/widgets/custome_search_text_field.dart';
+// import 'presentation/view/widgets/search_items_list_view_bloc_builder.dart';
+import 'presentation/view/widgets/search_view_body.dart';
 
 // screens
 part './presentation/view/search_view.dart';
 
 // components
-part './presentation/view/widgets/search_view_body.dart';
+// part './presentation/view/widgets/search_view_body.dart';
 part './presentation/view/widgets/search_items_list_view.dart';
 part 'presentation/view/widgets/search_items_list_view_loading_indecator.dart';
 part './presentation/view/widgets/search_list_view_item.dart';
