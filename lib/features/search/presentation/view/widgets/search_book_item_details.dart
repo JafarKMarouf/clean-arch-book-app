@@ -2,7 +2,7 @@ part of '../../../index.dart';
 
 class SearchBookItemDetails extends StatelessWidget {
   const SearchBookItemDetails({super.key, required this.booksItem});
-  final SearchEntity booksItem;
+  final BookEntity booksItem;
   @override
   Widget build(BuildContext context) {
     return Expanded(

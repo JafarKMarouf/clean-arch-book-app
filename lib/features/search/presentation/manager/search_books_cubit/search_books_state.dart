@@ -14,7 +14,7 @@ final class SearchBooksFailure extends SearchBooksState {
 }
 
 final class SearchBooksSuccess extends SearchBooksState {
-  final List<SearchEntity> searchEntity;
+  final List<BookEntity> searchEntity;
   SearchBooksSuccess({
     required this.searchEntity,
   });

@@ -2,7 +2,7 @@ part of '../../../index.dart';
 
 class SearchItemsListView extends StatelessWidget {
   const SearchItemsListView({super.key, required this.searchResultList});
-  final List<SearchEntity> searchResultList;
+  final List<BookEntity> searchResultList;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

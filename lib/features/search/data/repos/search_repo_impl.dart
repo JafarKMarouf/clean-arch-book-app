@@ -9,21 +9,21 @@ class SearchRepoImpl extends SearchRepo {
     required this.searchRemoteDataSource,
   });
   @override
-  Future<Either<Failure, List<SearchEntity>>> fetchSearchBooks({
+  Future<Either<Failure, List<BookEntity>>> fetchSearchBooks({
     int pageNumber = 0,
     required String title,
   }) async {
     try {
-      List<SearchEntity> result;
+      List<BookEntity> result;
 
       result = searchLocalDataSource.fetchSearchResult(
         pageNumber: pageNumber,
         title: title,
       );
 
-      // if (result.isNotEmpty) {
-      //   return right(result);
-      // }
+      if (result.isNotEmpty) {
+        return right(result);
+      }
 
       result = await searchRemoteDataSource.fetchSearchResult(
         pageNumber: pageNumber,

@@ -16,6 +16,12 @@ class SimilarBooksListViewBlocConsumer extends StatefulWidget {
 
 class _SimilarBooksListViewBlocConsumerState
     extends State<SimilarBooksListViewBlocConsumer> {
+  @override
+  void initState() {
+    super.initState();
+    BlocProvider.of<FetchFeaturedBooksCubit>(context).fetchFeaturedBook();
+  }
+
   List<BookEntity> booksList = [];
 
   @override

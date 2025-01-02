@@ -1,6 +1,6 @@
 part of '../../../index.dart';
 
-class SearchResultItem extends SearchEntity {
+class SearchResultItem extends BookEntity {
   String? kind;
   String? id;
   String? etag;

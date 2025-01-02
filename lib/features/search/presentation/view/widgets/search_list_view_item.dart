@@ -2,14 +2,14 @@ part of '../../../index.dart';
 
 class SearchListViewItem extends StatelessWidget {
   const SearchListViewItem({super.key, required this.bookItem});
-  final SearchEntity bookItem;
+  final BookEntity bookItem;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Get.toNamed(
           AppPages.bookDetails,
-          // arguments: {'book_item': bookItem},
+          arguments: {'book_item': bookItem},
         );
       },
       child: Row(

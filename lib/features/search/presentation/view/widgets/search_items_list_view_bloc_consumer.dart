@@ -1,3 +1,4 @@
+import 'package:clean_arch_bookly_app/features/home/index.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import '../../../../../core/index.dart';
@@ -14,7 +15,7 @@ class SearchItemsListViewBlocConsumer extends StatefulWidget {
 
 class _SearchItemsListViewBlocConsumerState
     extends State<SearchItemsListViewBlocConsumer> {
-  List<SearchEntity> booksList = [];
+  List<BookEntity> booksList = [];
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SearchBookCubit, SearchBooksState>(

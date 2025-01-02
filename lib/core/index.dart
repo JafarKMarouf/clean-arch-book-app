@@ -41,9 +41,7 @@ part './utils/shared/rating_books.dart';
 // functions
 part './utils/functions/build_input_border.dart';
 part './utils/functions/parse_to_book_model.dart';
-part './utils/functions/parse_to_search_model.dart';
 part './utils/functions/save_books_data.dart';
-part './utils/functions/save_search_result.dart';
 part './utils/functions/setup_service_locator.dart';
 
 // use case

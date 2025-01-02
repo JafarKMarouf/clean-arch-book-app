@@ -8,17 +8,8 @@ class BookDetailsView extends StatelessWidget {
     final args = Get.arguments;
     final BookEntity bookItem = args['book_item'];
 
-    return BlocProvider(
-      create: (context) {
-        return FetchFeaturedBooksCubit(
-          FetchFeaturedBooksUseCase(
-            homeRepo: getIt.get<HomeRepoImp>(),
-          ),
-        )..fetchFeaturedBook();
-      },
-      child: Scaffold(
-        body: BookDetailsViewBody(bookItem: bookItem),
-      ),
+    return Scaffold(
+      body: BookDetailsViewBody(bookItem: bookItem),
     );
   }
 }

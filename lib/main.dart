@@ -1,6 +1,5 @@
 import 'package:clean_arch_bookly_app/core/index.dart';
 import 'package:clean_arch_bookly_app/features/home/index.dart';
-import 'package:clean_arch_bookly_app/features/search/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -9,7 +8,6 @@ import 'package:hive_flutter/adapters.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  Hive.registerAdapter(SearchEntityAdapter());
 
   // await Hive.deleteBoxFromDisk(kSearchBox);
   // await Hive.deleteBoxFromDisk(kFeaturedBox);
@@ -17,7 +15,7 @@ void main() async {
 
   await Hive.openBox<BookEntity>(kFeaturedBox);
   await Hive.openBox<BookEntity>(kNewestBox);
-  await Hive.openBox<SearchEntity>(kSearchBox);
+  await Hive.openBox<BookEntity>(kSearchBox);
 
   setupServiceLocator();
   Bloc.observer = SimpleBlocObserver();

@@ -1,12 +1,12 @@
 part of '../../index.dart';
 
-class FetchSearchBooksUseCase extends UseCase<List<SearchEntity>, int, String> {
+class FetchSearchBooksUseCase extends UseCase<List<BookEntity>, int, String> {
   final SearchRepo searchRepo;
 
   FetchSearchBooksUseCase({required this.searchRepo});
 
   @override
-  Future<Either<Failure, List<SearchEntity>>> call([
+  Future<Either<Failure, List<BookEntity>>> call([
     int firstParam = 0,
     String? secondParam,
   ]) async {
