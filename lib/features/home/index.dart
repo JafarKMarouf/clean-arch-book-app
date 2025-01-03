@@ -18,6 +18,7 @@ import 'package:clean_arch_bookly_app/core/utils/constants/app_images.dart';
 
 import 'package:hive_flutter/adapters.dart';
 
+import 'presentation/view/widgets/book_actions.dart';
 import 'presentation/view/widgets/home_view_body.dart';
 
 // =============================================
@@ -33,7 +34,7 @@ part './presentation/view/widgets/book_item_details.dart';
 part './presentation/view/widgets/book_details_view_body.dart';
 part './presentation/view/widgets/custome_book_details_app_bar.dart';
 part 'presentation/view/widgets/books_list_view.dart';
-part './presentation/view/widgets/book_actions.dart';
+// part './presentation/view/widgets/book_actions.dart';
 part './presentation/view/widgets/infos_book_details.dart';
 part './presentation/view/widgets/featured_books_list_view_loading_indicator.dart';
 

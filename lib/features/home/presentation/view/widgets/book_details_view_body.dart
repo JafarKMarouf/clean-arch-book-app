@@ -27,7 +27,10 @@ class BookDetailsViewBody extends StatelessWidget {
                     const SizedBox(height: 43),
                     InfosBookDetails(bookItem: bookItem),
                     const SizedBox(height: 37),
-                    const BookActions(),
+                    BookActions(
+                      previewLink: bookItem.previewLink,
+                      price: bookItem.price,
+                    ),
                     const Expanded(child: SizedBox(height: 40)),
                     Text(
                       'You can also like',

@@ -25,7 +25,7 @@ class BookItem extends BookEntity {
           author: volumeInfo.authors!.isNotEmpty
               ? volumeInfo.authors!.first
               : 'Not Found Author',
-          price: 0.0,
+          price: 0,
           image: volumeInfo.imageLinks != null
               ? volumeInfo.imageLinks!.thumbnail
               : 'http://books.google.com/books/content?id=0RXLCgAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api',
