@@ -14,5 +14,5 @@ class AppImages {
 
   static const String imagesStarVector = "assets/images/star_vector.svg";
 
-  static const String imagesTest1 = "assets/images/test1.png";
+  static const String imagesTest1 = "assets/images/icon.png";
 }

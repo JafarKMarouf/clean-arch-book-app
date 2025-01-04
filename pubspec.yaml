@@ -39,6 +39,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/
 
   fonts:
     - family: GT-Sectra-Fine-Regular
