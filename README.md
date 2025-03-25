@@ -1,16 +1,18 @@
-# clean_arch_bookly_app
+# Clean Architecture Book App
 
-A new Flutter project.
+## Overview
 
-## Getting Started
+The **Clean Architecture Book App** is a Flutter application that displays books fetched from the Google Books API. This project demonstrates the principles of clean architecture, ensuring a well-structured and maintainable codebase.
 
-This project is a starting point for a Flutter application.
+## Key Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Integration with Google Books API**: Fetches and displays book information, including titles, authors, and descriptions.
+- **Responsive User Interface**: Designed with a clean and intuitive UI to enhance user experience across different devices.
+- **Modular Architecture**: Implements clean architecture principles, separating concerns and making the application easy to scale and maintain.
+- **Cross-Platform Compatibility**: Built with Flutter, ensuring the app works seamlessly on both iOS and Android platforms.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Framework**: Flutter
+- **Language**: Dart
+- **API**: Google Books API
